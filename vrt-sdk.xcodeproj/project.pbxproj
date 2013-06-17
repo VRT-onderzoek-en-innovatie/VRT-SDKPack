@@ -18,6 +18,8 @@
 		1034D2AE176F4400002FA682 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1034D2AD176F4400002FA682 /* Default-568h@2x.png */; };
 		1034D2B1176F4400002FA682 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1034D2AF176F4400002FA682 /* MainStoryboard.storyboard */; };
 		1034D2B4176F4400002FA682 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1034D2B3176F4400002FA682 /* ViewController.m */; };
+		1034D2BE176F4457002FA682 /* VRTTrafficManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 1034D2BD176F4457002FA682 /* VRTTrafficManager.m */; };
+		1034D2C1176F4659002FA682 /* VRTDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 1034D2C0176F4659002FA682 /* VRTDataSource.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +39,10 @@
 		1034D2B0176F4400002FA682 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
 		1034D2B2176F4400002FA682 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		1034D2B3176F4400002FA682 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		1034D2BC176F4457002FA682 /* VRTTrafficManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = VRTTrafficManager.h; path = VRTManagers/VRTTrafficManager/VRTTrafficManager.h; sourceTree = "<group>"; };
+		1034D2BD176F4457002FA682 /* VRTTrafficManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = VRTTrafficManager.m; path = VRTManagers/VRTTrafficManager/VRTTrafficManager.m; sourceTree = "<group>"; };
+		1034D2BF176F4659002FA682 /* VRTDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = VRTDataSource.h; path = VRTManagers/VRTDataSource/VRTDataSource.h; sourceTree = "<group>"; };
+		1034D2C0176F4659002FA682 /* VRTDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = VRTDataSource.m; path = VRTManagers/VRTDataSource/VRTDataSource.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +62,7 @@
 		1034D28B176F4400002FA682 = {
 			isa = PBXGroup;
 			children = (
+				1034D2BA176F4407002FA682 /* VRTManagers */,
 				1034D29D176F4400002FA682 /* vrt-sdk */,
 				1034D296176F4400002FA682 /* Frameworks */,
 				1034D295176F4400002FA682 /* Products */,
@@ -105,6 +112,25 @@
 				1034D2AD176F4400002FA682 /* Default-568h@2x.png */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		1034D2BA176F4407002FA682 /* VRTManagers */ = {
+			isa = PBXGroup;
+			children = (
+				1034D2BF176F4659002FA682 /* VRTDataSource.h */,
+				1034D2C0176F4659002FA682 /* VRTDataSource.m */,
+				1034D2BB176F441F002FA682 /* VRTTrafficManager */,
+			);
+			name = VRTManagers;
+			sourceTree = "<group>";
+		};
+		1034D2BB176F441F002FA682 /* VRTTrafficManager */ = {
+			isa = PBXGroup;
+			children = (
+				1034D2BC176F4457002FA682 /* VRTTrafficManager.h */,
+				1034D2BD176F4457002FA682 /* VRTTrafficManager.m */,
+			);
+			name = VRTTrafficManager;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -176,6 +202,8 @@
 				1034D2A4176F4400002FA682 /* main.m in Sources */,
 				1034D2A8176F4400002FA682 /* AppDelegate.m in Sources */,
 				1034D2B4176F4400002FA682 /* ViewController.m in Sources */,
+				1034D2BE176F4457002FA682 /* VRTTrafficManager.m in Sources */,
+				1034D2C1176F4659002FA682 /* VRTDataSource.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
