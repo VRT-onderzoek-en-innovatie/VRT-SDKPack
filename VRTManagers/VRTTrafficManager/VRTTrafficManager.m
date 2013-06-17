@@ -12,19 +12,31 @@
 
 @synthesize delegate;
 
-- (void)doeIets:(NSString*)adres {
-    VRTDataSource *databron = [[VRTDataSource alloc] init];
-    [databron setDelegate:self];
-    [databron haalDataOpVanAdres:@"http://services.vrt.be/traffic/events"];
+@synthesize dataSource;
+
+- (id)init {
+    if (self = [super init]) {
+        dataSource = [[VRTDataSource alloc] init];
+        [dataSource setDelegate:self];
+    }
+    
+    return self;
+}
+
+- (void)haalAlleEventsOp {
+    [dataSource haalDataOpVanAdres:@"http://services.vrt.be/traffic/events" metHeader:@"application/vnd.traffic.vrt.be.events_1.0+json"];
 }
 
 - (void)gafDataTerug:(NSData *)data {    
-    NSDictionary *jsonObject=[NSJSONSerialization
+    NSDictionary *antwoord=[NSJSONSerialization
                               JSONObjectWithData:data
                               options:NSJSONReadingMutableLeaves
                               error:nil];
     
-    NSLog(@"%@", jsonObject);
+    //Geef de data terug aan wie ze nodig heeft
+    if ([self.delegate respondsToSelector:@selector(haaldeEventsOp:)]) {
+        [self.delegate haaldeEventsOp:antwoord];
+    }
 }
 
 @end

@@ -25,6 +25,6 @@
 
 @property (nonatomic, strong) NSMutableData *antwoordData;
 
-- (void)haalDataOpVanAdres:(NSString*)adres;
+- (void)haalDataOpVanAdres:(NSString*)adres metHeader:(NSString*)header;
 
 @end

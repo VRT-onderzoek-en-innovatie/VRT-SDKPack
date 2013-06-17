@@ -10,7 +10,7 @@
 
 #import "VRTTrafficManager.h"
 
-@interface ViewController : UIViewController {
+@interface ViewController : UIViewController <VRTTrafficManagerDelegate> {
     VRTTrafficManager *trafficManager;
 }
 

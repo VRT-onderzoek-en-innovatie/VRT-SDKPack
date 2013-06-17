@@ -7,26 +7,13 @@
          shouldBeEnabled = "No"
          ignoreCount = "0"
          continueAfterRunningActions = "No"
-         filePath = "VRTManagers/VRTTrafficManager/VRTTrafficManager.m"
-         timestampString = "393170076.038637"
-         startingColumnNumber = "9223372036854775807"
-         endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "24"
-         endingLineNumber = "24"
-         landmarkName = "-gafDataTerug:"
-         landmarkType = "5">
-      </FileBreakpoint>
-      <FileBreakpoint
-         shouldBeEnabled = "No"
-         ignoreCount = "0"
-         continueAfterRunningActions = "No"
          filePath = "VRTManagers/VRTDataSource/VRTDataSource.m"
          timestampString = "393169946.195948"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
          startingLineNumber = "23"
          endingLineNumber = "23"
-         landmarkName = "-haalDataOpVanAdres:"
+         landmarkName = "-haalDataOpVanAdres:metHeader:"
          landmarkType = "5">
       </FileBreakpoint>
       <FileBreakpoint
@@ -79,19 +66,6 @@
          startingLineNumber = "49"
          endingLineNumber = "49"
          landmarkName = "-connection:didFailWithError:"
-         landmarkType = "5">
-      </FileBreakpoint>
-      <FileBreakpoint
-         shouldBeEnabled = "No"
-         ignoreCount = "0"
-         continueAfterRunningActions = "No"
-         filePath = "VRTManagers/VRTTrafficManager/VRTTrafficManager.m"
-         timestampString = "393169600.429077"
-         startingColumnNumber = "9223372036854775807"
-         endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "18"
-         endingLineNumber = "18"
-         landmarkName = "-doeIets:"
          landmarkType = "5">
       </FileBreakpoint>
       <FileBreakpoint

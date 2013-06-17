@@ -14,13 +14,18 @@
 @protocol VRTTrafficManagerDelegate <NSObject>
 
 @optional
+- (void)haaldeEventsOp:(NSObject*)trafficEvents; //NSObject moet VRTTrafficEvents worden, ofzo
 
 @end
 
-@interface VRTTrafficManager : NSObject<VRTTrafficManagerDelegate, VRTDataSourceDelegate>
+@interface VRTTrafficManager : NSObject<VRTTrafficManagerDelegate, VRTDataSourceDelegate> {
+    VRTDataSource *dataSource;
+}
 
 @property (nonatomic, strong) id <VRTTrafficManagerDelegate> delegate;
 
-- (void)doeIets:(NSString*)adres;
+@property (nonatomic, strong) VRTDataSource *dataSource;
+
+- (void)haalAlleEventsOp;
 
 @end

@@ -13,14 +13,14 @@
 @synthesize delegate;
 @synthesize antwoordData;
 
-- (void)haalDataOpVanAdres:(NSString*)adres {
+- (void)haalDataOpVanAdres:(NSString*)adres metHeader:(NSString*)header {
     NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:adres]];
-    [request setValue:@"application/vnd.traffic.vrt.be.events_1.0+json" forHTTPHeaderField:@"Accept"];
-    [request setValue:@"application/vnd.traffic.vrt.be.events_1.0+json" forHTTPHeaderField:@"Content-Type"];
+    [request setValue:header forHTTPHeaderField:@"Accept"];
+    [request setValue:header forHTTPHeaderField:@"Content-Type"];
     
     NSURLConnection *connection = [[NSURLConnection alloc] init];
     
-    (void)[connection initWithRequest:request delegate:self];
+    (void)[connection initWithRequest:request delegate:delegate];
 }
 
 #pragma mark NSURLConnection Delegate Methods
