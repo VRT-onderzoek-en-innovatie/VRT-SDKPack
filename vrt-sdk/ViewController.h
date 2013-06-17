@@ -11,9 +11,9 @@
 #import "VRTTrafficManager.h"
 
 @interface ViewController : UIViewController {
-    VRTTrafficManager *VRTtraffic;
+    VRTTrafficManager *trafficManager;
 }
 
-@property (nonatomic, strong) VRTTrafficManager *VRTTraffic;
+@property (nonatomic, strong) VRTTrafficManager *trafficManager;
 
 @end

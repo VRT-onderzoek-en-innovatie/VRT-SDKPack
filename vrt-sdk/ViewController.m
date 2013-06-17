@@ -14,14 +14,14 @@
 
 @implementation ViewController
 
-@synthesize VRTTraffic;
+@synthesize trafficManager;
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
-    VRTTraffic = [[VRTTrafficManager alloc] init];
-    [VRTTraffic doeIets:@""];
+    trafficManager = [[VRTTrafficManager alloc] init];
+    [trafficManager doeIets:@""];
 }
 
 - (void)didReceiveMemoryWarning
