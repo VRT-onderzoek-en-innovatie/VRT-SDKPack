@@ -20,6 +20,8 @@
 		1034D2B4176F4400002FA682 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1034D2B3176F4400002FA682 /* ViewController.m */; };
 		1034D2BE176F4457002FA682 /* VRTTrafficManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 1034D2BD176F4457002FA682 /* VRTTrafficManager.m */; };
 		1034D2C1176F4659002FA682 /* VRTDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 1034D2C0176F4659002FA682 /* VRTDataSource.m */; };
+		1034D2D917704FBA002FA682 /* Route.m in Sources */ = {isa = PBXBuildFile; fileRef = 1034D2D317704FBA002FA682 /* Route.m */; };
+		1034D2DB17704FBA002FA682 /* TrafficEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = 1034D2D717704FBA002FA682 /* TrafficEvent.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,6 +45,10 @@
 		1034D2BD176F4457002FA682 /* VRTTrafficManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = VRTTrafficManager.m; path = VRTManagers/VRTTrafficManager/VRTTrafficManager.m; sourceTree = "<group>"; };
 		1034D2BF176F4659002FA682 /* VRTDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = VRTDataSource.h; path = VRTManagers/VRTDataSource/VRTDataSource.h; sourceTree = "<group>"; };
 		1034D2C0176F4659002FA682 /* VRTDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = VRTDataSource.m; path = VRTManagers/VRTDataSource/VRTDataSource.m; sourceTree = "<group>"; };
+		1034D2D217704FBA002FA682 /* Route.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Route.h; path = Models/Route.h; sourceTree = "<group>"; };
+		1034D2D317704FBA002FA682 /* Route.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Route.m; path = Models/Route.m; sourceTree = "<group>"; };
+		1034D2D617704FBA002FA682 /* TrafficEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TrafficEvent.h; path = Models/TrafficEvent.h; sourceTree = "<group>"; };
+		1034D2D717704FBA002FA682 /* TrafficEvent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TrafficEvent.m; path = Models/TrafficEvent.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +68,7 @@
 		1034D28B176F4400002FA682 = {
 			isa = PBXGroup;
 			children = (
+				1034D2C217704EB1002FA682 /* Models */,
 				1034D2BA176F4407002FA682 /* VRTManagers */,
 				1034D29D176F4400002FA682 /* vrt-sdk */,
 				1034D296176F4400002FA682 /* Frameworks */,
@@ -131,6 +138,25 @@
 				1034D2BD176F4457002FA682 /* VRTTrafficManager.m */,
 			);
 			name = VRTTrafficManager;
+			sourceTree = "<group>";
+		};
+		1034D2C217704EB1002FA682 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				1034D2C317704F3C002FA682 /* Traffic */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		1034D2C317704F3C002FA682 /* Traffic */ = {
+			isa = PBXGroup;
+			children = (
+				1034D2D217704FBA002FA682 /* Route.h */,
+				1034D2D317704FBA002FA682 /* Route.m */,
+				1034D2D617704FBA002FA682 /* TrafficEvent.h */,
+				1034D2D717704FBA002FA682 /* TrafficEvent.m */,
+			);
+			name = Traffic;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -204,6 +230,8 @@
 				1034D2B4176F4400002FA682 /* ViewController.m in Sources */,
 				1034D2BE176F4457002FA682 /* VRTTrafficManager.m in Sources */,
 				1034D2C1176F4659002FA682 /* VRTDataSource.m in Sources */,
+				1034D2D917704FBA002FA682 /* Route.m in Sources */,
+				1034D2DB17704FBA002FA682 /* TrafficEvent.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -326,6 +354,7 @@
 				1034D2B9176F4400002FA682 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

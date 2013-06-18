@@ -9,12 +9,14 @@
 #import <Foundation/Foundation.h>
 #import "VRTDataSource.h"
 
+#import "TrafficEvent.h"
+
 @class VRTTrafficManager;
 
 @protocol VRTTrafficManagerDelegate <NSObject>
 
 @optional
-- (void)haaldeEventsOp:(NSObject*)trafficEvents; //NSObject moet VRTTrafficEvents worden, ofzo
+- (void)haaldeEventsOp:(NSMutableArray*)trafficEvents; //NSObject moet VRTTrafficEvents worden, ofzo
 
 @end
 

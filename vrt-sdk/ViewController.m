@@ -33,8 +33,9 @@
 
 #pragma mark - VRTTrafficManager Delegate Methods
 
-- (void)haaldeEventsOp:(NSObject *)trafficEvents {
+- (void)haaldeEventsOp:(NSMutableArray *)trafficEvents {
     NSLog(@"%@", trafficEvents);
+
 }
 
 @end

@@ -13,7 +13,7 @@
 @protocol VRTDataSourceDelegate<NSObject>
 
 @required
-- (void)gafDataTerug:(NSData*)data;
+- (void)verbinding:(NSURLConnection*)verbinding GafDataTerug:(NSData*)data;
 
 @end
 

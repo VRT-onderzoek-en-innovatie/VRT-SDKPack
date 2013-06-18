@@ -19,7 +19,6 @@
         dataSource = [[VRTDataSource alloc] init];
         [dataSource setDelegate:self];
     }
-    
     return self;
 }
 
@@ -27,15 +26,21 @@
     [dataSource haalDataOpVanAdres:@"http://services.vrt.be/traffic/events" metHeader:@"application/vnd.traffic.vrt.be.events_1.0+json"];
 }
 
-- (void)gafDataTerug:(NSData *)data {    
-    NSDictionary *antwoord=[NSJSONSerialization
-                              JSONObjectWithData:data
-                              options:NSJSONReadingMutableLeaves
-                              error:nil];
+- (void)verbinding:(NSURLConnection *)verbinding GafDataTerug:(NSData *)data {
+    NSDictionary *antwoord=[NSJSONSerialization JSONObjectWithData:data
+                                                           options:NSJSONReadingMutableLeaves
+                                                             error:nil];
+    
+    NSMutableArray *allTrafficEvents = [[NSMutableArray alloc] init];
+    
+    for (NSDictionary *thisEvent in [antwoord objectForKey:@"events"]) {
+        TrafficEvent *event = [[TrafficEvent alloc] initWithEvent:thisEvent];
+        [allTrafficEvents addObject:event];
+    }
     
     //Geef de data terug aan wie ze nodig heeft
     if ([self.delegate respondsToSelector:@selector(haaldeEventsOp:)]) {
-        [self.delegate haaldeEventsOp:antwoord];
+        [self.delegate haaldeEventsOp:allTrafficEvents];
     }
 }
 

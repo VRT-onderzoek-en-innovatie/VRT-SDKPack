@@ -11,6 +11,7 @@
 @implementation VRTDataSource
 
 @synthesize delegate;
+
 @synthesize antwoordData;
 
 - (void)haalDataOpVanAdres:(NSString*)adres metHeader:(NSString*)header {
@@ -19,8 +20,7 @@
     [request setValue:header forHTTPHeaderField:@"Content-Type"];
     
     NSURLConnection *connection = [[NSURLConnection alloc] init];
-    
-    (void)[connection initWithRequest:request delegate:delegate];
+    (void)[connection initWithRequest:request delegate:self];
 }
 
 #pragma mark NSURLConnection Delegate Methods
@@ -40,8 +40,8 @@
 
 - (void)connectionDidFinishLoading:(NSURLConnection *)connection {
     //Antwoorddata is vol
-    if ([self.delegate respondsToSelector:@selector(gafDataTerug:)]) {
-        [self.delegate gafDataTerug:antwoordData];
+    if ([self.delegate respondsToSelector:@selector(verbinding:GafDataTerug:)]) {
+        [self.delegate verbinding:connection GafDataTerug:antwoordData];
     }
 }
 
